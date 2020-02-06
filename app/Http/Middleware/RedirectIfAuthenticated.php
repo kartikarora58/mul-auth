@@ -25,6 +25,11 @@ class RedirectIfAuthenticated
                     return redirect()->route('admin.home');
                 }
                 break;
+            case 'vendor':
+                if(Auth::guard($guard)->check()){
+                    return redirect()->route('vendor.home');
+                }
+                break;
             default:
                 if(Auth::guard($guard)->check()){
                     return redirect(RouteServiceProvider::HOME);

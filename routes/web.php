@@ -22,4 +22,12 @@ Route::prefix('admin')->group(function(){
    Route::get('/home','AdminController@index')->name('admin.home');
    Route::post('/logout','Auth\AdminLoginController@logout')->name('admin.logout');
 });
+Route::prefix('vendor')->group(function(){
+    Route::get('/login','Auth\VendorLoginController@showLoginForm')->name('vendor.login');
+    Route::post('/login','Auth\VendorLoginController@login')->name('vendor.login.submit');
+    Route::get('/home','VendorController@index')->name('vendor.home');
+    Route::post('/logout','Auth\VendorLoginController@logout')->name('vendor.logout');
+    Route::get('/register','Auth\VendorRegisterController@showRegisterForm')->name('vendor.register');
+    Route::post('/register','Auth\VendorRegisterController@register')->name('vendor.register.submit');
+});
 Route::get('/home', 'HomeController@index')->name('home');

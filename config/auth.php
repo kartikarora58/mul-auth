@@ -44,6 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'vendor'=>[
+            'driver'=>'session',
+            'provider'=>'vendors',
+        ],
         'admin'=>[
             'driver'=>'session',
             'provider'=>'admins',
@@ -80,6 +84,10 @@ return [
         'admins'=>[
             'driver'=>'eloquent',
             'model'=>App\Admin::class,
+        ],
+        'vendors'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Vendor::class,
         ],
 
         // 'users' => [

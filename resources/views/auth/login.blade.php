@@ -62,6 +62,7 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                <a href="{{url('/vendor/login')}}" target="_blank">click here for vendor login</a>
                             </div>
                         </div>
                     </form>
